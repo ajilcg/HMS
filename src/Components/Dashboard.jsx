@@ -23,7 +23,7 @@ const navItems = ['Home', 'About', 'Contact'];
 // const title=['Patient Management','Doctor Management']
 
 const dat=[
-    {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history"},
+    {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history","path":"Patient"},
     {"imgs":"src/assets/images/doctor.jpg","titles":'Doctor Management',"content":"Manage doctors, specializations, and scheduling"},
     {"imgs":"src/assets/images/appoiment.jpg","titles":"Appointment Scheduling","content":"Book and manage appointments, automated scheduling alerts"},
     {"imgs":"src/assets/images/billing.jpg","titles":"Billing System","content":"Track treatments, medications, and generate bills for patients"},

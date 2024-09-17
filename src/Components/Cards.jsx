@@ -5,6 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import { Patient } from './Patient/Patient';
 
  
 const Cards=(props)=>{
@@ -26,8 +28,8 @@ const Cards=(props)=>{
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        {/* <Button size="small">Share</Button> */}
+       <Link to={props.val.path}> <Button size="small">Click Here ➔</Button></Link>
       </CardActions>
     </Card>
  </>
