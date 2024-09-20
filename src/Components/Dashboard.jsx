@@ -15,10 +15,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Cards from './Cards';
+import { Link } from 'react-router-dom';
 
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+// const navItems = ['Home', 'About', 'Contact'];
+
+const navItems = [{name:'Home',path:'/'},{name:'About'},{name:'Contact'}];
 // const imgs=['src/assets/images/patient.jpg','src/assets/images/doctor.jpg','src/assets/images/doctor.jpg']
 // const title=['Patient Management','Doctor Management']
 
@@ -49,7 +52,7 @@ const Dashboard=(props)=>{
             {navItems.map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton sx={{ textAlign: 'center' }}>
-                  <ListItemText primary={item} />
+                  <ListItemText primary={item.name} />
                 </ListItemButton>
               </ListItem>
             ))}
@@ -83,9 +86,9 @@ return(
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
-            <Button key={item} sx={{ color: '#fff' }}>
-              {item}
-            </Button>
+          <Link to={item.path} ><Button key={item} sx={{ color: '#fff' }}>
+              {item.name}
+            </Button></Link> 
           ))}
         </Box>
       </Toolbar>
@@ -119,13 +122,13 @@ return(
 
     
 
-    <div className='row'>
+    {/* <div className='row'>
     {dat.map((item)=>(
             <div className='col-sm'>
             <Cards val={item}></Cards>
             </div>
     ))}
-    </div>
+    </div> */}
   
     </Box>
   </Box>
