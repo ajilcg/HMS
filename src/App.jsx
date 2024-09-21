@@ -12,28 +12,22 @@ import { Login } from './Components/Login/Login'
   function App() {
 
     const location=useLocation();
-
+console.log(location.pathname);
     return (
     <>
-    
-   <Dashboard></Dashboard>
+  
+   {location.pathname!='/login' && <Dashboard ></Dashboard>}
    <Outlet></Outlet>
      
-    <Login></Login>
-    <div className='row'>
+     <div className='row'>
       {DashboardItems.map((item)=>(
       <div className='col-sm'> 
-     {location.pathname=='/' && <Cards key={item.id}  DashboardItems={item}></Cards>}
+     {location.pathname=='/' && <Cards  key={item.id}  DashboardItems={item}></Cards>}
         </div>
         ))}
  </div>
-      {/* <Dashboard>
-          </Dashboard>   */}
-     <Routes>
-      <Route path='/' element={<Dashboard/>}></Route>
-      <Route path='/Patient' element={<Patient/>}></Route>
-      <Route path='/ManageDr' element={<ManageDoctor/>}></Route>
-      </Routes> 
+     
+
      </>
   )
 }

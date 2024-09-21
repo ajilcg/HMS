@@ -21,9 +21,7 @@ import { Link } from 'react-router-dom';
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
 
-const navItems = [{name:'Home',path:'/'},{name:'About'},{name:'Contact'}];
-// const imgs=['src/assets/images/patient.jpg','src/assets/images/doctor.jpg','src/assets/images/doctor.jpg']
-// const title=['Patient Management','Doctor Management']
+const navItems = [{name:'Home',path:'/'},{name:'About'},{name:'Contact'}]; 
 
 const dat=[
     {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history","path":"Patient"},
@@ -64,7 +62,7 @@ const Dashboard=(props)=>{
 
       
 return(
-    <Box sx={{ display: 'flex' }}>
+    <Box   sx={{ display: 'flex' }}>
     <CssBaseline />
     <AppBar style={{backgroundColor:'#32b1a8'}} component="nav">
       <Toolbar>

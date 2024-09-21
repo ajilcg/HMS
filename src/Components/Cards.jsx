@@ -24,8 +24,8 @@ const Cards=(props)=>{
         
  <>
 {/* <h1>{content}</h1> */}
-
-<Card sx={{ maxWidth: 340 }}>
+<div style={{padding:'0.8rem'}}>
+<Card sx={{ maxWidth: 340}}>
       <CardMedia
         sx={{ height: 140 }} 
  image={imgs}
@@ -55,7 +55,7 @@ const Cards=(props)=>{
        </CardActions> */}
     </Card>
 
-
+    </div>
  </>
     )
 }
