@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-import { Patient } from './Patient/Patient';
+import { RegisterPatient } from './Patient/RegisterPatient';
 
  
 const Cards=(props)=>{
@@ -25,7 +25,7 @@ const Cards=(props)=>{
  <>
 {/* <h1>{content}</h1> */}
 <div style={{padding:'0.8rem'}}>
-<Card sx={{ maxWidth: 340}}>
+<Card sx={{ maxWidth: 340,height:405}}>
       <CardMedia
         sx={{ height: 140 }} 
  image={imgs}

@@ -16,7 +16,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Cards from './Cards';
 import { Link } from 'react-router-dom';
-
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import { Icon } from '@mui/material';
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
@@ -43,7 +44,7 @@ const Dashboard=(props)=>{
       const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ my: 2 }}>
-            HMS
+           HMS
           </Typography>
           <Divider />
           <List>
@@ -66,6 +67,8 @@ return(
     <CssBaseline />
     <AppBar style={{backgroundColor:'#32b1a8'}} component="nav">
       <Toolbar>
+      <LocalHospitalIcon>
+      </LocalHospitalIcon>
         <IconButton
           color="inherit"
           aria-label="open drawer"
@@ -80,7 +83,7 @@ return(
           component="div"
           sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
         >
-          HMS
+           HMS
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
