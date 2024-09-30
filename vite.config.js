@@ -5,3 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
+const cors = require('cors');
+const express = require('express');
+const app = express();
+
+app.use(cors()); // Enable CORS for all routes

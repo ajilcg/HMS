@@ -1,9 +1,11 @@
 
 .patientForm{
-   padding: 2rem;
+   padding: 3rem;
    
  }
-
+ strong{
+  text-align: left;
+ }
 .cls{
      background-image: url('src/assets/images/patient.jpg'),url('src/assets/images/billing.jpg');
    background-repeat: no-repeat;
@@ -20,9 +22,60 @@
 
  
  img{
-  aspect-ratio: 2 / 1.0;
+  /* aspect-ratio: 2 / 1.0; */
+  aspect-ratio: 10 / 4;
+  left: 10px;
+  top: 10px;
   border-radius: 1%;
+ }
+
+ 
+
+
+ .txt{
+  margin-bottom: 10rem;
+  font-size: 3.4385rem;
+  max-width: 659px;
+  /* line-height: 8.2; */
+   font-weight: 4000;
+  font-family: am-title-font-family;
+  text-align:left;
+background-blend-mode: color-dodge;
+animation:txt 10s ease-in infinite;
+
 }
 
-.carousel img{
-transition: ease-in-out ease-out; }
+img{
+  
+  animation:crsl 16s ease-out infinite ;
+}
+ 
+@keyframes crsl {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+    /* opacity: 0.5; */
+ 
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+
+
+@keyframes txt {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
