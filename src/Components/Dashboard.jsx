@@ -16,7 +16,9 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Cards from './Cards';
 import { Link } from 'react-router-dom';
-
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import { Icon } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
@@ -43,7 +45,7 @@ const Dashboard=(props)=>{
       const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ my: 2 }}>
-            HMS
+           HMS
           </Typography>
           <Divider />
           <List>
@@ -62,29 +64,30 @@ const Dashboard=(props)=>{
 
       
 return(
-    <Box   sx={{ display: 'flex' }}>
+    <Box   sx={{ display: 'flex'  }}>
     <CssBaseline />
-    <AppBar style={{backgroundColor:'#32b1a8'}} component="nav">
+    {/* #32b1a8 */}
+    <AppBar style={{backgroundColor:'white'}} component="nav">
       <Toolbar>
-        <IconButton
-          color="inherit"
+       <FontAwesomeIcon icon="fas fa-hospital" />
+              <IconButton
+          color="red"
           aria-label="open drawer"
           edge="start"
           onClick={handleDrawerToggle}
           sx={{ mr: 2, display: { sm: 'none' } }}
         >
-          <MenuIcon />
-        </IconButton>
+         </IconButton>
         <Typography align='left'
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          sx={{ flexGrow: 1,color:'#32b1a8', fontFamily: 'am-title-font-family', display: { xs: 'none', sm: 'block' } }}
         >
-          HMS
+           HMS
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
-          <Link to={item.path} ><Button key={item} sx={{ color: '#fff' }}>
+          <Link to={item.path} ><Button key={item} sx={{ color: '#32b1a8' }}>
               {item.name}
             </Button></Link> 
           ))}
