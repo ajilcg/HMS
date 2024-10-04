@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -7,7 +7,9 @@ import Cards from './Components/Cards'
 import { Routes,Route,Outlet,useLocation} from 'react-router-dom'
  import DashboardItems from './Components/DashboardItems'
 import { ManageDoctor } from './Components/Doctor/ManageDoctor'
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
    function App() {
+ 
 
     const location=useLocation();
 console.log(location.pathname);
@@ -23,6 +25,8 @@ console.log(location.pathname);
      {location.pathname=='/' && <Cards  key={item.id}  DashboardItems={item}></Cards>}
         </div>
         ))}
+        
+
  </div>
      
 

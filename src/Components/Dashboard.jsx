@@ -18,12 +18,13 @@ import Cards from './Cards';
 import { Link } from 'react-router-dom';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import { Icon } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Carousel } from 'react-bootstrap';
+
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
 
-const navItems = [{name:'Home',path:'/'},{name:'About'},{name:'Contact'}]; 
+const navItems = [{name:'Home',path:'/'},{name:'About'},{name:'Logout', path:'/Login'}]; 
 
 const dat=[
     {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history","path":"Patient"},
@@ -33,6 +34,13 @@ const dat=[
     {"imgs":"src/assets/images/pharmacy.jpg","titles":"Pharmacy Management","content":"Manage medicine inventory, prescriptions, and sales"},
 ]
 
+const img=[
+  {'url':'src/assets/images/Pediatric.jpg','caption':'Making a connection between happiness and health','color':'white'},
+{'url':'https://asianheartinstitute.org/wp-content/uploads/2023/12/diagnostics-banner.webp','caption':'Transforming Lives with Better Healthcare','color':'black'},
+{'url':'src/assets/images/hospital-image.jpg','caption':'25 years of doing the impossible','color':'white'},
+{'url':'src/assets/images/home-banner.jpg','caption':'The Health Care You Can Trust','color':'black'}
+
+]
 const Dashboard=(props)=>{ 
   
     const { window } = props;
@@ -48,7 +56,7 @@ const Dashboard=(props)=>{
            HMS
           </Typography>
           <Divider />
-          <List>
+          <List > 
             {navItems.map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton sx={{ textAlign: 'center' }}>
@@ -64,30 +72,37 @@ const Dashboard=(props)=>{
 
       
 return(
-    <Box   sx={{ display: 'flex'  }}>
+  <>
+ 
+  <div>
+   
+  
+    <Box    sx={{ display: 'flex' }}>
+      
     <CssBaseline />
-    {/* #32b1a8 */}
     <AppBar style={{backgroundColor:'white'}} component="nav">
       <Toolbar>
-       <FontAwesomeIcon icon="fas fa-hospital" />
-              <IconButton
-          color="red"
+      <LocalHospitalIcon>
+      </LocalHospitalIcon>
+        <IconButton
+          color="inherit"
           aria-label="open drawer"
           edge="start"
           onClick={handleDrawerToggle}
           sx={{ mr: 2, display: { sm: 'none' } }}
         >
-         </IconButton>
+          <MenuIcon />
+        </IconButton>
         <Typography align='left'
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1,color:'#32b1a8', fontFamily: 'am-title-font-family', display: { xs: 'none', sm: 'block' } }}
+          sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
         >
            HMS
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
-          <Link to={item.path} ><Button key={item} sx={{ color: '#32b1a8' }}>
+          <Link to={item.path} >< Button style={{color:'#32b1a8'}}  key={item} sx={{ color: '#fff' }}>
               {item.name}
             </Button></Link> 
           ))}
@@ -105,13 +120,13 @@ return(
         }}
         sx={{
           display: { xs: 'block', sm: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          '& .-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
         {drawer}
       </Drawer>
     </nav>
-    <Box component="main">
+    <Box component="main"> 
       <Toolbar />
       {/* <div className='row'>
     {imgs.map((item)=>(
@@ -133,6 +148,10 @@ return(
   
     </Box>
   </Box>
+  </div>
+
+  
+  </>
 )
 }
 Dashboard.propTypes = {

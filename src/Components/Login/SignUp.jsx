@@ -28,7 +28,7 @@ export const SignUp = () => {
      <input type="password" placeholder="Confirm Password" id="password">
      </input><br></br>
     <small>Already have an account?</small> <a href='/Login' style={{cursor:'pointer',color:'blue'}} >Login</a>
-     <button className='btn'>Log In</button>
+     <button className='btnn'>Register</button>
    
  </form>
 </body>
