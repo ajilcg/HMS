@@ -19,12 +19,13 @@ import { Link } from 'react-router-dom';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import { Icon } from '@mui/material';
 import { Carousel } from 'react-bootstrap';
+import { Footer } from './Footer';
 
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
 
-const navItems = [{name:'Home',path:'/'},{name:'About'},{name:'Logout', path:'/Login'}]; 
+const navItems = [{name:'Home',path:'/'},{name:'About',path:'/Footer'},{name:'Logout', path:'/Login'}]; 
 
 const dat=[
     {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history","path":"Patient"},
@@ -34,13 +35,6 @@ const dat=[
     {"imgs":"src/assets/images/pharmacy.jpg","titles":"Pharmacy Management","content":"Manage medicine inventory, prescriptions, and sales"},
 ]
 
-const img=[
-  {'url':'src/assets/images/Pediatric.jpg','caption':'Making a connection between happiness and health','color':'white'},
-{'url':'https://asianheartinstitute.org/wp-content/uploads/2023/12/diagnostics-banner.webp','caption':'Transforming Lives with Better Healthcare','color':'black'},
-{'url':'src/assets/images/hospital-image.jpg','caption':'25 years of doing the impossible','color':'white'},
-{'url':'src/assets/images/home-banner.jpg','caption':'The Health Care You Can Trust','color':'black'}
-
-]
 const Dashboard=(props)=>{ 
   
     const { window } = props;
@@ -52,7 +46,7 @@ const Dashboard=(props)=>{
     
       const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-          <Typography variant="h6" sx={{ my: 2 }}>
+          <Typography style={{color:'red'}} variant="h6" sx={{ my: 2 }}>
            HMS
           </Typography>
           <Divider />
@@ -80,7 +74,7 @@ return(
     <Box    sx={{ display: 'flex' }}>
       
     <CssBaseline />
-    <AppBar style={{backgroundColor:'white'}} component="nav">
+    <AppBar style={{backgroundColor:'white', opacity:'0.9'}} component="nav">
       <Toolbar>
       <LocalHospitalIcon>
       </LocalHospitalIcon>
@@ -93,7 +87,7 @@ return(
         >
           <MenuIcon />
         </IconButton>
-        <Typography align='left'
+        <Typography align='left' style={{color:'#32b1a8'}}
           variant="h6"
           component="div"
           sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
@@ -128,6 +122,7 @@ return(
     </nav>
     <Box component="main"> 
       <Toolbar />
+      
       {/* <div className='row'>
     {imgs.map((item)=>(
             <div className='col-sm'>

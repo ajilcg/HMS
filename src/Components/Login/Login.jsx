@@ -28,8 +28,9 @@ export const Login = () => {
         <label  className='lbl' for="password">Password</label>
         <input required type="password" placeholder="Password" id="password"></input><br></br>
         <small>Dont have an account? </small><a href='/SignUp' style={{cursor:'pointer',color:'blue'}} >Register</a>
-      <Link to={'/'}> <button ty className='btnn'>Log In</button></Link> 
-      
+      {/* <Link to={'/'}> <button ty className='btnn'>Log In</button></Link>  */}
+      <Link to={'/'}> <button href='/' className='btnn'>Log In</button></Link> 
+
     </form>
 
 </body>
