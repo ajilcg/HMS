@@ -18,12 +18,14 @@ import Cards from './Cards';
 import { Link } from 'react-router-dom';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import { Icon } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Carousel } from 'react-bootstrap';
+import { Footer } from './Footer';
+
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
 
-const navItems = [{name:'Home',path:'/'},{name:'About'},{name:'Contact'}]; 
+const navItems = [{name:'Home',path:'/'},{name:'About',path:'/Footer'},{name:'Logout', path:'/Login'}]; 
 
 const dat=[
     {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history","path":"Patient"},
@@ -44,11 +46,11 @@ const Dashboard=(props)=>{
     
       const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-          <Typography variant="h6" sx={{ my: 2 }}>
+          <Typography style={{color:'red'}} variant="h6" sx={{ my: 2 }}>
            HMS
           </Typography>
           <Divider />
-          <List>
+          <List > 
             {navItems.map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton sx={{ textAlign: 'center' }}>
@@ -64,30 +66,37 @@ const Dashboard=(props)=>{
 
       
 return(
-    <Box   sx={{ display: 'flex'  }}>
+  <>
+ 
+  <div>
+   
+  
+    <Box    sx={{ display: 'flex' }}>
+      
     <CssBaseline />
-    {/* #32b1a8 */}
-    <AppBar style={{backgroundColor:'white'}} component="nav">
+    <AppBar style={{backgroundColor:'white', opacity:'0.9'}} component="nav">
       <Toolbar>
-       <FontAwesomeIcon icon="fas fa-hospital" />
-              <IconButton
-          color="red"
+      <LocalHospitalIcon>
+      </LocalHospitalIcon>
+        <IconButton
+          color="inherit"
           aria-label="open drawer"
           edge="start"
           onClick={handleDrawerToggle}
           sx={{ mr: 2, display: { sm: 'none' } }}
         >
-         </IconButton>
-        <Typography align='left'
+          <MenuIcon />
+        </IconButton>
+        <Typography align='left' style={{color:'#32b1a8'}}
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1,color:'#32b1a8', fontFamily: 'am-title-font-family', display: { xs: 'none', sm: 'block' } }}
+          sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
         >
            HMS
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
-          <Link to={item.path} ><Button key={item} sx={{ color: '#32b1a8' }}>
+          <Link to={item.path} >< Button style={{color:'#32b1a8'}}  key={item} sx={{ color: '#fff' }}>
               {item.name}
             </Button></Link> 
           ))}
@@ -105,14 +114,15 @@ return(
         }}
         sx={{
           display: { xs: 'block', sm: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          '& .-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
         {drawer}
       </Drawer>
     </nav>
-    <Box component="main">
+    <Box component="main"> 
       <Toolbar />
+      
       {/* <div className='row'>
     {imgs.map((item)=>(
             <div className='col-sm'>
@@ -133,6 +143,10 @@ return(
   
     </Box>
   </Box>
+  </div>
+
+  
+  </>
 )
 }
 Dashboard.propTypes = {

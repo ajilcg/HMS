@@ -15,7 +15,7 @@ const DashboardItems=[
     },
     {
         id:3,
-        imgs:"src/assets/images/appoiment.jpg",
+        imgs:"src/assets/images/appointment.jpg",
         titles:"Appointment Scheduling",
         content:["Book and manage appointments","automated scheduling alerts"],
         path:["Booking","ScheduleAlert"]
