@@ -4,7 +4,7 @@ const DashboardItems=[
         imgs:"src/assets/images/patient.jpg",
         titles:"Patient Management",
         content:["Register new patients","update patient profiles","manage medical history"],
-        path:["RegisterPatient","UpdatePatient","ManageMedicalHis"]
+        path:["RegisterPatient","UpdatePatient","ManageMedicalHistory"]
     },
     {
         id:2,
