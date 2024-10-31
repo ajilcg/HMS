@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import './Login.css'
 import './Login.js'
 import { TextField } from '@mui/material'
@@ -7,11 +7,9 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
  
 export const Login = () => {
-  
-  const [validated, setValidated] = useState(false);
+   const [validated, setValidated] = useState(false);
   const [errorMsg,setErrorMsg]=useState("");
-
-const[form1,setForm]=useState({
+ const[form1,setForm]=useState({
   Username: '',
   Password: ''
  });
@@ -42,12 +40,11 @@ const navigate=useNavigate();
   
       const res = await axios.post('https://localhost:44338/api/Login', form1); 
       setResponse(res.data);
-      console.log(res.data);
-
+ 
             setError(null); // Clear previous errors
       //  document.getElementById("Form1").reset();
-  
-    }
+   
+     }
      catch (err) {
       setError(err.response ? err.response.data : 'An error occurred');
       if (err.response.data.status==404)
@@ -59,7 +56,8 @@ const navigate=useNavigate();
       setResponse(null); // Clear previous response
     }
     if (errorMsg!==404 && validated==true && form1.Password!=='' && form1.Username!==''){
-      navigate('/',form1.Username)
+       navigate('/',{state:form1.Username})
+
     };
 
     };
@@ -68,12 +66,11 @@ const navigate=useNavigate();
   return (
 
     <>
- 
-    <body className='bd'>
+     <body className='bd'>
        {/* <h3>Login Here</h3> */}
-   {/* <canvas id="Mycanvas"></canvas> */}
-
-    {/* <div  class="background">
+   <canvas id="Mycanvas"></canvas>
+{/* 
+    <div  class="background">
 
          <div class="shape"></div>
         <div class="shape"></div> 

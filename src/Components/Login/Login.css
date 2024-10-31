@@ -169,10 +169,12 @@ form h3{
 }
 
 /* 
-body{
+canvas{
  background-image: url('src/assets/images/green-abstract-background.jpg'); 
  background-size: cover;
-}
+ background-position:center;
+ max-width: 900%;
+ }
   */
 
 

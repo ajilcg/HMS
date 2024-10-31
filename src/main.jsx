@@ -14,6 +14,7 @@ import { Carousel } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { Footer } from './Components/Footer.jsx';
 import { UpdatePatient } from './Components/Patient/UpdatePatient.jsx'
+import { PatientGrid } from './Components/Patient/PatientGrid.jsx'
  
 
  
@@ -40,6 +41,7 @@ const img=[
       <Route path='/Login' element={<Login></Login>}></Route>
       <Route path='/SignUp' element={<SignUp></SignUp>}></Route>
       <Route path='/Footer' element={<Footer></Footer>}></Route>
+      <Route path='/PatientGrid' element={<PatientGrid></PatientGrid>}></Route>
       </Routes> 
      <App />
 

@@ -15,7 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Cards from './Cards';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import { Icon } from '@mui/material';
 import { Carousel } from 'react-bootstrap';
@@ -24,7 +24,7 @@ import { Footer } from './Footer';
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
-
+  
 const navItems = [{name:'Home',path:'/'},{name:'About',path:'/Footer'},{name:'Logout', path:'/Login'}]; 
 
 const dat=[
@@ -36,7 +36,16 @@ const dat=[
 ]
 
 const Dashboard=(props)=>{ 
-     const { window } = props;
+  //   const navigate=useNavigate();
+  // const location=useLocation();
+  // const data=location.state;
+  // alert(data);
+  //   if (data==null){
+  //   navigate('/Login');
+  //   return false;
+  // }
+ 
+  const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -122,23 +131,6 @@ return(
     <Box component="main"> 
       <Toolbar />
       
-      {/* <div className='row'>
-    {imgs.map((item)=>(
-            <div className='col-sm'>
-            <Cards val={item}></Cards>
-            </div>
-    ))}
-    </div> */}
-
-    
-
-    {/* <div className='row'>
-    {dat.map((item)=>(
-            <div className='col-sm'>
-            <Cards val={item}></Cards>
-            </div>
-    ))}
-    </div> */}
   
     </Box>
   </Box>
