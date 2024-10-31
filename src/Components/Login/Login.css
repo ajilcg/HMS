@@ -94,7 +94,7 @@ form h3{
   font-weight: 500;
 }
 
-input{
+.input{
     display: block;
     height: 50px;
     width: 100%;
@@ -156,7 +156,7 @@ input{
   
   width: 400px;   
  height: 580px; 
- background-color: rgba(255,255,255,0.13);
+ background-color: rgba(255,255,255,0.13);  
  position: absolute;
  transform: translate(-50%,-50%);
  top: 50%;
@@ -168,9 +168,14 @@ input{
  padding: 28px 35px;
 }
 
-
-
- 
+/* 
+canvas{
+ background-image: url('src/assets/images/green-abstract-background.jpg'); 
+ background-size: cover;
+ background-position:center;
+ max-width: 900%;
+ }
+  */
 
 
 
