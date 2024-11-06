@@ -11,14 +11,14 @@ const DashboardItems=[
         imgs:"src/assets/images/doctor.jpg",
         titles:'Doctor Management',
         content:["Manage doctors","specializations", "scheduling"],
-        path:["ManageDr","Specializations","Scheduling"]
+        path:["ManageDoctor","ViewDoctor","UpdateDoctor"]
     },
     {
         id:3,
         imgs:"src/assets/images/appointment.jpg",
         titles:"Appointment Scheduling",
         content:["Book and manage appointments","automated scheduling alerts"],
-        path:["Booking","ScheduleAlert"]
+        path:["AddAppoinment","ViewAppoinment"]
     },
      {
     id:4,
@@ -31,8 +31,8 @@ const DashboardItems=[
         id:5,
         imgs:"src/assets/images/pharmacy.jpg",
         titles:"Pharmacy Management",
-        content:["Manage medicine inventory","prescriptions", "sales"],
-        path:["ManageDr"]
+        content:["Manage medicine inventory", "sales"],
+        path:["AddMedicine","ViewMedicine"]
     },
 
 ]
