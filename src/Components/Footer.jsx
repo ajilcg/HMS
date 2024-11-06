@@ -4,13 +4,15 @@ import { MDBIcon } from 'mdbreact';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
+import { FitScreen } from '@mui/icons-material';
 export const Footer = () => {
   return (
    <>
    
    
+ 
 
- <MDBFooter bgColor='' className='text-center text-lg-start text-muted'>
+ <MDBFooter  bgColor=' ' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
           <span>Get connected with us on social networks:</span>
@@ -106,13 +108,13 @@ export const Footer = () => {
         </MDBContainer>
       </section>
 
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+      {/* <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2021 Copyright:
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
           MDBootstrap.com
         </a>
-      </div>
+      </div> */}
     </MDBFooter>
-   </>
+    </>
   )
 }
