@@ -199,9 +199,9 @@ const clear=()=>{
  
 <br></br>
  <div class="btnb">
-     <button type="submit" class='btn subbtn' >Register</button> 
+     <button type="submit" class='btn subbtn' >Update</button> 
     <button onClick={clear} type="reset" class='btn btn-secondary'  >Clear</button>
-   <Link to='/patientGrid'> <button  class='btn btn-secondary'  >↲ Go to Patient List</button></Link>
+   <Link to='/patientGrid/1'> <button  class='btn btn-secondary'  >↲ Go to Patient List</button></Link>
 
     </div>
  </div>

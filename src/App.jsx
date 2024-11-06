@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Dashboard from './Components/Dashboard'
 import Cards from './Components/Cards'
-import { Routes,Route,Outlet,useLocation, useNavigate, BrowserRouter} from 'react-router-dom'
+import { Routes,Route,Outlet,useLocation, useNavigate, BrowserRouter, useParams} from 'react-router-dom'
  import DashboardItems from './Components/DashboardItems'
  import { Footer } from './Components/Footer'
   import DashboardChart from './Components/DashboardChart'
@@ -15,20 +15,26 @@ import CarauselItems from './Components/CarauselItems'
 import { SignUp } from './Components/Login/SignUp.jsx'
 import { Carousel } from 'react-bootstrap';
  import { UpdatePatient } from './Components/Patient/UpdatePatient.jsx'
+ import Marquee from "react-fast-marquee";
 
    function App() {
  
     const location=useLocation();
    
-    
- 
     return (
     <>
- {location.pathname!='/login' &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
- <Outlet></Outlet>
-      {location.pathname!='/login'  && location.pathname!='/UpdatePatient' && location.pathname!='/patientGrid' && location.pathname!='/SignUp' && location.pathname!='/Login' && location.pathname!='/RegisterPatient' && <CarauselItems></CarauselItems>}
+ {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
  
-     {location.pathname=='/' && <DashboardChart></DashboardChart>}
+ 
+ <Outlet></Outlet>
+      {/* {location.pathname!='/login'  && location.pathname!='/UpdatePatient' && location.pathname!='/patientGrid/2' && location.pathname!='/patientGrid/1' && location.pathname!='/SignUp' && location.pathname!='/Login' && location.pathname!='/RegisterPatient' && location.pathname!='/trackTratment' && <CarauselItems></CarauselItems>} */}
+      {location.pathname=='/' && <CarauselItems></CarauselItems>}
+      <br></br>
+ {location.pathname=='/' && <Marquee gradient pauseOnHover gradientColor='rgb(170, 102, 204)'>
+  Our team of experts provides top-notch medical treatment with empathy using the most advanced technology
+</Marquee>}<br></br>
+
+     {/* {location.pathname=='/' && <DashboardChart></DashboardChart>} */}
 
       <Outlet></Outlet>
 
@@ -42,7 +48,7 @@ import { Carousel } from 'react-bootstrap';
         ))} 
  </div>
  
- {location.pathname!=='/Login' && location.pathname!=='/SignUp' && <Footer></Footer>}
+ {location.pathname!=='/Login' && location.pathname!=='/SignUp'&& location.pathname!=='/billing'  && <Footer></Footer>}
 
       </>
 

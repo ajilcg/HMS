@@ -3,10 +3,11 @@ import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import { Carousel } from 'react-bootstrap';
 import axios from 'axios';
-import { json, useNavigate } from 'react-router-dom';
+import { json, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { button } from '@material-tailwind/react';
 import { Button } from '@mui/material';
 import Table from 'react-bootstrap/Table';
+import Marquee from "react-fast-marquee";
 
 
 
@@ -21,11 +22,14 @@ import Table from 'react-bootstrap/Table';
 
 
   
-export const PatientGrid = () => {
+export const PatientGrid = (props) => {
   const [users, setUsers] = useState([])
  const [loading, setLoading] = useState(false)
+ const {value}=useParams();
+ 
+ 
  const navigate=useNavigate();
-
+console.log(props.state);
  
 
 useEffect(() => {
@@ -38,12 +42,21 @@ useEffect(() => {
 )
 
  const selectCustomer = (rowValue) => {
-   navigate('/UpdatePatient',{state:rowValue})
+  if(value==1){
+    navigate('/UpdatePatient',{state:rowValue})
 
+  }
+  else if(value==3){
+    navigate(`/trackTratment/${encodeURIComponent('B+.')}`,{state:rowValue}) 
+
+  }
+ else{
+    navigate(`/trackTratment/${encodeURIComponent('A+.')}`,{state:rowValue}) 
+  }
   }
 
 return (
-      <div className="col-sm-12">
+      <div class='col-sm-12'>
       {loading ? (
         <div>Loading...</div>
       ) : (
@@ -62,9 +75,9 @@ return (
     </Carousel>   */}
     
 
-  <Box   sx={{ height: 450, width: '100%',paddingTop:"6rem"}}>
-
-  <Table striped bordered hover>
+  <Box   sx={{ height: 450,maxWidth: '100%',paddingTop:"6rem"}}>
+ 
+   <Table hover>
       <thead>
         <tr>
           <th>Sl.No</th>
@@ -99,3 +112,4 @@ return (
     </div>       
   )
 }
+export default PatientGrid

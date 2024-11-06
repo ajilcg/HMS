@@ -20,6 +20,8 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import { Icon } from '@mui/material';
 import { Carousel } from 'react-bootstrap';
 import { Footer } from './Footer';
+import Marquee from "react-fast-marquee";
+
 
 
 const drawerWidth = 240;
@@ -28,10 +30,10 @@ const drawerWidth = 240;
 const navItems = [{name:'Home',path:'/'},{name:'About',path:'/Footer'},{name:'Logout', path:'/Login'}]; 
 
 const dat=[
-    {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history","path":"Patient"},
+    {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients,update patient profiles,Manage medical history","path":"Patient"},
     {"imgs":"src/assets/images/doctor.jpg","titles":'Doctor Management',"content":"Manage doctors, specializations, and scheduling"},
     {"imgs":"src/assets/images/appoiment.jpg","titles":"Appointment Scheduling","content":"Book and manage appointments, automated scheduling alerts"},
-    {"imgs":"src/assets/images/billing.jpg","titles":"Billing System","content":"Track treatments, medications, and generate bills for patients"},
+    {"imgs":"src/assets/images/billing.jpg","tis":"BilliSystem","content":"Track treatments, medications, and generate bills for patients"},
     {"imgs":"src/assets/images/pharmacy.jpg","titles":"Pharmacy Management","content":"Manage medicine inventory, prescriptions, and sales"},
 ]
 
@@ -54,6 +56,7 @@ const Dashboard=(props)=>{
     
       const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+          
           <Typography style={{color:'red'}} variant="h6" sx={{ my: 2 }}>
            HMS
           </Typography>
@@ -83,6 +86,7 @@ return(
       
     <CssBaseline />
     <AppBar style={{backgroundColor:'white', opacity:'0.9'}} component="nav">
+
       <Toolbar>
       <LocalHospitalIcon>
       </LocalHospitalIcon>
@@ -103,8 +107,9 @@ return(
            HMS
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          
           {navItems.map((item) => (
-          <Link to={item.path} >< Button style={{color:'#32b1a8'}}  key={item} sx={{ color: '#fff' }}>
+          <Link to={item.path} params={{state:item.path}} >< Button style={{color:'#32b1a8'}}  key={item} sx={{ color: '#fff' }}>
               {item.name}
             </Button></Link> 
           ))}

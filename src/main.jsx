@@ -15,6 +15,8 @@ import { useLocation } from 'react-router-dom';
 import { Footer } from './Components/Footer.jsx';
 import { UpdatePatient } from './Components/Patient/UpdatePatient.jsx'
 import { PatientGrid } from './Components/Patient/PatientGrid.jsx'
+import  TrackTreatment from './Components/PatientBilling/TrackTreatment.jsx'
+import Billing from './Components/PatientBilling/Billing.jsx'
  
 
  
@@ -41,7 +43,9 @@ const img=[
       <Route path='/Login' element={<Login></Login>}></Route>
       <Route path='/SignUp' element={<SignUp></SignUp>}></Route>
       <Route path='/Footer' element={<Footer></Footer>}></Route>
-      <Route path='/PatientGrid' element={<PatientGrid></PatientGrid>}></Route>
+      <Route path='/PatientGrid/:value' element={<PatientGrid></PatientGrid>}></Route>
+      <Route path='/trackTratment/:value' element={<TrackTreatment></TrackTreatment>} ></Route>
+     <Route path='/Billing' element={<Billing></Billing>}></Route>
       </Routes> 
      <App />
 
