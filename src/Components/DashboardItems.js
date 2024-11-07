@@ -4,7 +4,7 @@ const DashboardItems=[
         imgs:"src/assets/images/patient.jpg",
         titles:"Patient Management",
         content:["Register new patients","update patient profiles","manage medical history"],
-        path:["RegisterPatient","UpdatePatient","ManageMedicalHis"]
+        path:["RegisterPatient","patientGrid/1","patientGrid/3"]
     },
     {
         id:2,
@@ -25,7 +25,7 @@ const DashboardItems=[
     imgs:"src/assets/images/billing.jpg",
     titles:"Patient Billing System",
     content:["Track treatments","medications","generate bills for patients"],
-    path:["TrackTreatment","Medications","GenerateBill"]
+    path:["patientGrid/2","Medications","GenerateBill"]
     },
     {
         id:5,

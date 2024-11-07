@@ -20,6 +20,9 @@ import AddAppoinment from './Components/Appoinment/AddAppoinment.jsx'
 import ViewAppoinment from './Components/Appoinment/ViewAppoinment.jsx'
 import AddMedicine from './Components/Medicine/AddMedicine.jsx'
 import ViewMedicine from './Components/Medicine/ViewMedicine.jsx'
+import { PatientGrid } from './Components/Patient/PatientGrid.jsx'
+import  TrackTreatment from './Components/PatientBilling/TrackTreatment.jsx'
+import Billing from './Components/PatientBilling/Billing.jsx'
  
 
  
@@ -53,6 +56,9 @@ const img=[
       <Route path='/ViewAppoinment' element={<ViewAppoinment></ViewAppoinment>} ></Route>
       <Route path='/AddMedicine' element={<AddMedicine></AddMedicine>}></Route>
       <Route path='/ViewMedicine' element={<ViewMedicine></ViewMedicine>}></Route>
+      <Route path='/PatientGrid/:value' element={<PatientGrid></PatientGrid>}></Route>
+      <Route path='/trackTratment/:value' element={<TrackTreatment></TrackTreatment>} ></Route>
+     <Route path='/Billing' element={<Billing></Billing>}></Route>
       </Routes> 
      <App />
 

@@ -15,29 +15,39 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Cards from './Cards';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import { Icon } from '@mui/material';
 import { Carousel } from 'react-bootstrap';
 import { Footer } from './Footer';
+import Marquee from "react-fast-marquee";
+
 
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
-
+  
 const navItems = [{name:'Home',path:'/'},{name:'About',path:'/Footer'},{name:'Logout', path:'/Login'}]; 
 
 const dat=[
-    {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients, update patient profiles, and manage medical history","path":"Patient"},
+    {"imgs":"src/assets/images/patient.jpg","titles":"Patient Management","content":"Register new patients,update patient profiles,Manage medical history","path":"Patient"},
     {"imgs":"src/assets/images/doctor.jpg","titles":'Doctor Management',"content":"Manage doctors, specializations, and scheduling"},
     {"imgs":"src/assets/images/appoiment.jpg","titles":"Appointment Scheduling","content":"Book and manage appointments, automated scheduling alerts"},
-    {"imgs":"src/assets/images/billing.jpg","titles":"Billing System","content":"Track treatments, medications, and generate bills for patients"},
+    {"imgs":"src/assets/images/billing.jpg","tis":"BilliSystem","content":"Track treatments, medications, and generate bills for patients"},
     {"imgs":"src/assets/images/pharmacy.jpg","titles":"Pharmacy Management","content":"Manage medicine inventory, prescriptions, and sales"},
 ]
 
 const Dashboard=(props)=>{ 
-  
-    const { window } = props;
+  //   const navigate=useNavigate();
+  // const location=useLocation();
+  // const data=location.state;
+  // alert(data);
+  //   if (data==null){
+  //   navigate('/Login');
+  //   return false;
+  // }
+ 
+  const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -46,6 +56,7 @@ const Dashboard=(props)=>{
     
       const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+          
           <Typography style={{color:'red'}} variant="h6" sx={{ my: 2 }}>
            HMS
           </Typography>
@@ -75,6 +86,7 @@ return(
       
     <CssBaseline />
     <AppBar style={{backgroundColor:'white', opacity:'0.9'}} component="nav">
+
       <Toolbar>
       <LocalHospitalIcon>
       </LocalHospitalIcon>
@@ -95,8 +107,9 @@ return(
            HMS
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          
           {navItems.map((item) => (
-          <Link to={item.path} >< Button style={{color:'#32b1a8'}}  key={item} sx={{ color: '#fff' }}>
+          <Link to={item.path} params={{state:item.path}} >< Button style={{color:'#32b1a8'}}  key={item} sx={{ color: '#fff' }}>
               {item.name}
             </Button></Link> 
           ))}
@@ -123,23 +136,6 @@ return(
     <Box component="main"> 
       <Toolbar />
       
-      {/* <div className='row'>
-    {imgs.map((item)=>(
-            <div className='col-sm'>
-            <Cards val={item}></Cards>
-            </div>
-    ))}
-    </div> */}
-
-    
-
-    {/* <div className='row'>
-    {dat.map((item)=>(
-            <div className='col-sm'>
-            <Cards val={item}></Cards>
-            </div>
-    ))}
-    </div> */}
   
     </Box>
   </Box>
