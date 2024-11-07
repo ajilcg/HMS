@@ -23,6 +23,9 @@ import { Carousel } from 'react-bootstrap';
    
     return (
     <>
+ {location.pathname!='/login' && location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
+ <Outlet></Outlet>
+      {location.pathname!='/login'  && location.pathname!='/ViewDoctor'  && location.pathname!='/UpdatePatient' && location.pathname!='/SignUp' && location.pathname!='/Login' && location.pathname!='/RegisterPatient' && location.pathname!='/AddAppoinment' && <CarauselItems></CarauselItems>}
  {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
  
  
