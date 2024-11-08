@@ -16,6 +16,8 @@ import { SignUp } from './Components/Login/SignUp.jsx'
 import { Carousel } from 'react-bootstrap';
  import { UpdatePatient } from './Components/Patient/UpdatePatient.jsx'
  import Marquee from "react-fast-marquee";
+import InvoicePage from './Components/InvoicePage.jsx'
+ 
 
    function App() {
  
@@ -23,11 +25,9 @@ import { Carousel } from 'react-bootstrap';
    
     return (
     <>
- {location.pathname!='/login' && location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
- <Outlet></Outlet>
-      {location.pathname!='/login'  && location.pathname!='/ViewDoctor'  && location.pathname!='/UpdatePatient' && location.pathname!='/SignUp' && location.pathname!='/Login' && location.pathname!='/RegisterPatient' && location.pathname!='/AddAppoinment' && <CarauselItems></CarauselItems>}
- {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
  
+  {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
+  
  
  <Outlet></Outlet>
       {/* {location.pathname!='/login'  && location.pathname!='/UpdatePatient' && location.pathname!='/patientGrid/2' && location.pathname!='/patientGrid/1' && location.pathname!='/SignUp' && location.pathname!='/Login' && location.pathname!='/RegisterPatient' && location.pathname!='/trackTratment' && <CarauselItems></CarauselItems>} */}

@@ -23,7 +23,8 @@ import ViewMedicine from './Components/Medicine/ViewMedicine.jsx'
 import { PatientGrid } from './Components/Patient/PatientGrid.jsx'
 import  TrackTreatment from './Components/PatientBilling/TrackTreatment.jsx'
 import Billing from './Components/PatientBilling/Billing.jsx'
- 
+import './scss/main.scss';
+import * as serviceWorker from './serviceWorker.js';
 
  
 
@@ -65,7 +66,7 @@ const img=[
 
 
     </BrowserRouter>
-  </StrictMode>,
-  
+  </StrictMode>
 )
+serviceWorker.register()
 export default main
