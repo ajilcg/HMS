@@ -14,6 +14,12 @@ import { Carousel } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { Footer } from './Components/Footer.jsx';
 import { UpdatePatient } from './Components/Patient/UpdatePatient.jsx'
+import ViewDoctor from './Components/Doctor/ViewDoctor.jsx'
+import UpdateDoctor from './Components/Doctor/UpdateDoctor.jsx'
+import AddAppoinment from './Components/Appoinment/AddAppoinment.jsx'
+import ViewAppoinment from './Components/Appoinment/ViewAppoinment.jsx'
+import AddMedicine from './Components/Medicine/AddMedicine.jsx'
+import ViewMedicine from './Components/Medicine/ViewMedicine.jsx'
 import { PatientGrid } from './Components/Patient/PatientGrid.jsx'
 import  TrackTreatment from './Components/PatientBilling/TrackTreatment.jsx'
 import Billing from './Components/PatientBilling/Billing.jsx'
@@ -44,6 +50,13 @@ const img=[
       <Route path='/Login' element={<Login></Login>}></Route>
       <Route path='/SignUp' element={<SignUp></SignUp>}></Route>
       <Route path='/Footer' element={<Footer></Footer>}></Route>
+      <Route path='/ManageDoctor' element={<ManageDoctor></ManageDoctor>}></Route>
+      <Route path='/ViewDoctor'  element={<ViewDoctor></ViewDoctor>}></Route>
+      <Route path='/UpdateDoctor' element={<UpdateDoctor></UpdateDoctor>}></Route>
+      <Route path='/AddAppoinment' element={<AddAppoinment></AddAppoinment>}></Route>
+      <Route path='/ViewAppoinment' element={<ViewAppoinment></ViewAppoinment>} ></Route>
+      <Route path='/AddMedicine' element={<AddMedicine></AddMedicine>}></Route>
+      <Route path='/ViewMedicine' element={<ViewMedicine></ViewMedicine>}></Route>
       <Route path='/PatientGrid/:value' element={<PatientGrid></PatientGrid>}></Route>
       <Route path='/trackTratment/:value' element={<TrackTreatment></TrackTreatment>} ></Route>
      <Route path='/Billing' element={<Billing></Billing>}></Route>

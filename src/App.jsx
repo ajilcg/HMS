@@ -25,8 +25,9 @@ import InvoicePage from './Components/InvoicePage.jsx'
    
     return (
     <>
-  {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
  
+  {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
+  
  
  <Outlet></Outlet>
       {/* {location.pathname!='/login'  && location.pathname!='/UpdatePatient' && location.pathname!='/patientGrid/2' && location.pathname!='/patientGrid/1' && location.pathname!='/SignUp' && location.pathname!='/Login' && location.pathname!='/RegisterPatient' && location.pathname!='/trackTratment' && <CarauselItems></CarauselItems>} */}
