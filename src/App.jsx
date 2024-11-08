@@ -16,6 +16,8 @@ import { SignUp } from './Components/Login/SignUp.jsx'
 import { Carousel } from 'react-bootstrap';
  import { UpdatePatient } from './Components/Patient/UpdatePatient.jsx'
  import Marquee from "react-fast-marquee";
+import InvoicePage from './Components/InvoicePage.jsx'
+ 
 
    function App() {
  
@@ -23,7 +25,7 @@ import { Carousel } from 'react-bootstrap';
    
     return (
     <>
- {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
+  {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
  
  
  <Outlet></Outlet>

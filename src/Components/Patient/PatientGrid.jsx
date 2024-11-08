@@ -32,8 +32,8 @@ export const PatientGrid = (props) => {
 console.log(props.state);
  
 
-useEffect(() => {
-  fetch("https://localhost:44338/api/Patient")
+useEffect(() => { 
+   fetch("https://localhost:44338/api/Patient")
     .then((data) => data.json())
     .then((data) => setUsers(data))
     console.log(users);

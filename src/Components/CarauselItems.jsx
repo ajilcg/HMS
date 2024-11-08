@@ -18,7 +18,9 @@ export const CarauselItems = () => {
 
    {img.map((Item)=>(
         <Carousel.Item>
+                  <div className='mvImg'> 
        <img className='crsl' sizes='100vw' src={Item.url} class="d-block w-100" alt="..."></img>
+        </div>
          <Carousel.Caption className='blr'>
            <h1 className='txt' style={{color:Item.color}}>{Item.caption}</h1>
           </Carousel.Caption>

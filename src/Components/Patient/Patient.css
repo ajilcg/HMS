@@ -21,7 +21,7 @@
  }
 
  
- img{
+ .mvImg> img{
   /* aspect-ratio: 2 / 1.0; */
   aspect-ratio: 10 / 4;
   left: 10px;
@@ -46,7 +46,7 @@ animation:txt 10s ease-in infinite;
 
 }
 
-img{
+.mvImg> img{
   
   animation:crsl 16s ease-out infinite ;
  }
