@@ -12,7 +12,7 @@ const ViewMedicine = () => {
        const [medicines, setMedicines] = useState([]);
   useEffect(() => {
     axios
-      .get("https://localhost:7061/api/Medicine")
+      .get("https://localhost:7277/api/Medicine")
       .then((response) => {
         // console.log("", response);
         setMedicines(response.data);

@@ -59,7 +59,7 @@ const img=[
       <Route path='/ViewMedicine' element={<ViewMedicine></ViewMedicine>}></Route>
       <Route path='/PatientGrid/:value' element={<PatientGrid></PatientGrid>}></Route>
       <Route path='/trackTratment/:value' element={<TrackTreatment></TrackTreatment>} ></Route>
-     <Route path='/Billing' element={<Billing></Billing>}></Route>
+     <Route path='/GenerateBill'  element={<Billing></Billing>}></Route>
       </Routes> 
      <App />
 

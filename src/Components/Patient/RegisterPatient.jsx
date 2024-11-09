@@ -57,7 +57,7 @@ function capValue(event){
 const finalOut = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post('https://localhost:44338/api/Patient', form); 
+    const res = await axios.post('https://localhost:7277/api/Patient', form); 
     setResponse(res.data);
     console.log(res.data);
          setError(null); // Clear previous errors

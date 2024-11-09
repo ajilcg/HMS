@@ -38,7 +38,7 @@ const navigate=useNavigate();
       setValidated(false);
     }
   
-      const res = await axios.post('https://localhost:44338/api/Login', form1); 
+      const res = await axios.post('https://localhost:7277/api/Login', form1); 
       setResponse(res.data);
  
             setError(null); // Clear previous errors

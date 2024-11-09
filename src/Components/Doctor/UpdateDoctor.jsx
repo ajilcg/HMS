@@ -26,7 +26,7 @@ const UpdateDoctor = () => {
     };
 
     axios
-      .put("https://localhost:7061/api/Doctor/${doctorId}", updatedDoctor)
+      .put("https://localhost:7277/api/Doctor/${doctorId}", updatedDoctor)
       .then((response) => {
         console.log("Doctor updated:", response.data);
         // Update the doctor list to reflect the changes

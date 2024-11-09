@@ -50,7 +50,7 @@ function capValue(event){
 const finalOut = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post('https://localhost:7061/api/Doctor', form); 
+    const res = await axios.post('https://localhost:7277/api/Doctor', form); 
     setResponse(res.data);
     console.log(res.data);
          setError(null); // Clear previous errors
@@ -126,6 +126,6 @@ const finalOut = async (e) => {
  </form>
 
     </>
-    <div></div>
+    
   )
 }

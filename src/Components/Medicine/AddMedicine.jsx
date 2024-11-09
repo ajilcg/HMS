@@ -27,7 +27,7 @@ const AddMedicine = () => {
 
   const AddMedicine = () => {
     axios
-      .post("https://localhost:7061/api/Medicine", newMedicine)
+      .post("https://localhost:7277/api/Medicine", newMedicine)
       .then((response) => {
         console.log("medicines added:", response.data);
         setMedicines((prevMedicines) => [...prevMedicines, response.data]);

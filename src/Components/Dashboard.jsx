@@ -104,12 +104,12 @@ return(
           component="div"
           sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
         >
-           HMS
-        </Typography>
+          <img src='../src/assets/images/LoGoHealMate.png'  style={{width:'215px'}}></img>
+         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           
           {navItems.map((item) => (
-          <Link to={item.path} params={{state:item.path}} >< Button style={{color:'#32b1a8'}}  key={item} sx={{ color: '#fff' }}>
+          <Link to={item.path} params={{state:item.path}} >< Button style={{color:'#ca229f'}}  key={item} sx={{ color: '#fff' }}>
               {item.name}
             </Button></Link> 
           ))}

@@ -50,7 +50,7 @@ const [load,setLoad]=useState(false);
 
  
       useEffect(() => {
-        fetch("https://localhost:44338/api/Patient/"+pId)
+        fetch("https://localhost:7277/api/Patient/"+pId)
           .then((data) => data.json())
           .then((data) => setForm(data))
        
@@ -61,7 +61,7 @@ const [load,setLoad]=useState(false);
 const finalOut = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.put('https://localhost:44338/api/Patient/'+pId, form); 
+    const res = await axios.put('https://localhost:7277/api/Patient/'+pId, form); 
  
     setResponse(res.data);
     console.log(res.data);

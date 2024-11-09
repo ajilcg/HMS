@@ -26,7 +26,7 @@ import InvoicePage from './Components/InvoicePage.jsx'
     return (
     <>
  
-  {location.pathname!='/login'&& location.pathname!=='/billing'   &&  location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
+  {location.pathname!='/login'&& location.pathname!='/' && location.pathname!='/SignUp' && location.pathname!='/Login' &&  <Dashboard></Dashboard>}
   
  
  <Outlet></Outlet>
@@ -51,7 +51,7 @@ import InvoicePage from './Components/InvoicePage.jsx'
         ))} 
  </div>
  
- {location.pathname!=='/Login' && location.pathname!=='/SignUp'&& location.pathname!=='/billing'  && <Footer></Footer>}
+ {location.pathname!=='/Login' && location.pathname!=='/SignUp'&& location.pathname!=='/GenerateBill'  && <Footer></Footer>}
 
       </>
 

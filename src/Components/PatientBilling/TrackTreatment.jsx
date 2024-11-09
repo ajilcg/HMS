@@ -45,7 +45,7 @@ const [error, setError] = useState(null);
           
           useEffect(() => {
           
-            fetch("https://localhost:44338/api/Patient/"+pId)
+            fetch("https://localhost:7277/api/Patient/"+pId)
               .then((data) => data.json())
               .then((data) => setForm(data))
            
@@ -55,7 +55,7 @@ const [error, setError] = useState(null);
  
  useEffect(()=>{
 
-    fetch("https://localhost:44338/api/Medical/"+pId)
+    fetch("https://localhost:7277/api/Medical/"+pId)
     .then((data)=>data.json())
     .then((data)=>setMedicalHis(data))
 },[],)
@@ -69,7 +69,7 @@ const finalOut = async (e) => {
     e.preventDefault();
 
      try {
-        const res = await axios.post("https://localhost:44338/api/Medical", medicalForm); 
+        const res = await axios.post("https://localhost:7277/api/Medical", medicalForm); 
         
        setResponse(res.data);
       console.log(res.data);

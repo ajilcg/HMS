@@ -33,7 +33,7 @@ const AddAppoinment = () => {
   {console.log(newAppoinment)}
   const addPatient = () => {
     axios
-    .post("https://localhost:7061/api/Appointment", newAppoinment)
+    .post("https://localhost:7277/api/Appointment", newAppoinment)
     .then((response) => {
       // setAppoinments((prevAppoinments) => [...prevAppoinments, response.data]);
       console.log("appoinments added:", response.data);

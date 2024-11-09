@@ -44,7 +44,7 @@ const Cards=(props)=>{
        <CardActions >
         
 
-       <Link to={Child[index]}> <Button style={{textAlign:'left'}} size="small">{Menu}</Button></Link><br></br>
+       <Link to={Child[index]}  > <Button style={{textAlign:'left'}} size="small">{Menu}</Button></Link><br></br>
      </CardActions>    
     ))}
    {/* <CardActions>

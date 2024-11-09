@@ -12,7 +12,7 @@ const ViewDoctor = () => {
        const [doctors, setDoctors] = useState([]);
   useEffect(() => {
     axios
-      .get("https://localhost:7061/api/Doctor")
+      .get("https://localhost:7277/api/Doctor")
       .then((response) => {
         // console.log("", response);
         setDoctors(response.data);

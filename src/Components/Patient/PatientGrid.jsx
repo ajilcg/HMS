@@ -33,7 +33,7 @@ console.log(props.state);
  
 
 useEffect(() => { 
-   fetch("https://localhost:44338/api/Patient")
+   fetch("https://localhost:7277/api/Patient")
     .then((data) => data.json())
     .then((data) => setUsers(data))
     console.log(users);

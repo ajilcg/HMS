@@ -44,7 +44,7 @@ const finalSubmit = async (e) => {
   }
   setValidated(true);
 
-    const res = await axios.post('https://localhost:44338/api/Login/Register', form1); 
+    const res = await axios.post('https://localhost:7277/api/Login/Register', form1); 
     setResponse(res.data);
     console.log(res.data);
   

@@ -45,9 +45,8 @@ export const Footer = () => {
           <MDBRow className='mt-3'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon icon="gem" className="me-3" />
-                Company name
-              </h6>
+              <img src='src/assets/images/LoGoHealMate.png'  style={{width:'215px'}}></img>
+               </h6>
               <p>
               Every life is precious to us. You are important, and we care for you. We at Amrita Hospitals are there for you when you need us the most. Our hospital is where science, technology, and research merge to embrace good health. We are a community of physician
               </p>
@@ -63,29 +62,7 @@ export const Footer = () => {
                 
             </MDBCol>
 
-            <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Help
-                </a>
-              </p>
-            </MDBCol>
+             
 
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
@@ -95,13 +72,13 @@ export const Footer = () => {
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                healmate@gmail.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+                <MDBIcon icon="phone" className="me-3" /> + 9995766737
               </p>
               <p>
-                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+                <MDBIcon icon="print" className="me-3" /> + 9995586634
               </p>
             </MDBCol>
           </MDBRow>
