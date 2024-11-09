@@ -13,11 +13,7 @@ const UpdateDoctor = () => {
     
   });
 
-  const updateDoctor = () => {
-    if (!doctorId) {
-      console.error("Doctor ID is required for update");
-      return;
-    }
+
 
     // Ensure that the newPatient object includes the ID for the PUT request
     const updatedDoctor = {
@@ -25,32 +21,46 @@ const UpdateDoctor = () => {
       id: doctorId // Assign the doctorId to the id field
     };
 
-    axios
-      .put("https://localhost:7277/api/Doctor/${doctorId}", updatedDoctor)
-      .then((response) => {
-        console.log("Doctor updated:", response.data);
-        // Update the doctor list to reflect the changes
-        setDoctors((prevDoctor) =>
-          prevDoctor.map((doctor) =>
-            doctor.id === parseInt(doctorId) ? response.data : doctor
-          )
-        );
-        // Clear the input fields after submission
-        setNewdoctor({
-          id: '',
-          name: '',
-          specialization: '',
-          time: '',
-          day: ''
+    function submitDoctor(){
+      if (!doctorId) {
+        console.error("Doctor ID is required for update");
+        return;
+      }
+      axios
+        .put(`https://localhost:7277/api/Doctor/${doctorId}`, updatedDoctor)
+        .then((response) => {
+          console.log("Doctor updated:", response.data);
+          // Update the doctor list to reflect the changes
+          setDoctors((prevDoctor) =>
+            prevDoctor.map((doctor) =>
+              doctor.id === parseInt(doctorId) ? response.data : doctor
+            )
+          );
+          // Clear the input fields after submission
+          setNewdoctor({
+            id: '',
+            name: '',
+            specialization: '',
+            time: '',
+            day: ''
+          });
+          setDoctorId(''); // Clear the doctor ID
+        })
+        .catch((error) => {
+          console.error("There was an error updating the doctor!", error);
         });
-        setDoctorId(''); // Clear the doctor ID
-      })
-      .catch((error) => {
-        console.error("There was an error updating the doctor!", error);
-      });
-  };
+
+    }
+
+
+  // const updateDoctors = () => {
+ 
+
+  // };
 
   return (
+    <form onSubmit={submitDoctor} >
+
     <div style={{paddingTop:'6rem'}}>
       {/* <h2>Doctor Update</h2> */}
       <div>
@@ -112,7 +122,7 @@ const UpdateDoctor = () => {
       </div> */}
  <div class="form-group col-md-6">
       <label for='Time'> Time</label>
-      <input  required id='Time'onChange={(e) => setNewdoctor({ ...newdoctor, specialization: e.target.value })}   name='Time'   class="form-control" placeholder=" Time"></input>
+      <input  required id='Time'onChange={(e) => setNewdoctor({ ...newdoctor, time: e.target.value })}   name='Time'   class="form-control" placeholder=" Time"></input>
     </div> 
 
       {/* <div class="form-group col-md-6">
@@ -124,17 +134,22 @@ const UpdateDoctor = () => {
         onChange={(e) => setNewdoctor({ ...newdoctor, day: e.target.value })} 
       />
        </div> */}
+     
+      
 <div class="form-group col-md-6">
       <label for='Day'> Day</label>
       <input  required id='Day'onChange={(e) => setNewdoctor({ ...newdoctor, day: e.target.value })}   name='Day'   class="form-control" placeholder=" Day"></input>
+   <br></br> 
     </div> 
+    <div className=' col-md-10'>
+     <button type="submit" style={{backgroundColor:'#a865ca',color:'white'}} class='btn subbtn' >Update</button> 
 
+    </div>
      
-      <div class="btnb">
-    <button type="submit" class='btn subbtn' >Update Doctor</button> 
-  
-   </div>
 
+ 
+  
+ 
       {/* <h3>Registered Doctors:</h3> */}
       <ul>
         {doctors.map((doctor) => (
@@ -144,6 +159,7 @@ const UpdateDoctor = () => {
         ))}
       </ul>
     </div>
+    </form>
   );
 };
 

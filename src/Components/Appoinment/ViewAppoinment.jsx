@@ -12,7 +12,7 @@ const ViewAppoinment = () => {
        const [appoinments, setAppoinments] = useState([]);
   useEffect(() => {
     axios
-      .get("https://localhost:7061/api/Appointment")
+      .get("https://localhost:7277/api/Appointment")
       .then((response) => {
         // console.log("", response);
         setAppoinments(response.data);
@@ -25,7 +25,7 @@ const ViewAppoinment = () => {
  
 
     <div style={{paddingTop:'6rem'}}>
-        <h2>View Appoinment</h2>
+        <h2>View Appoinments</h2>
          <TableContainer>
             <Table>
                 <TableHead>
@@ -35,7 +35,7 @@ const ViewAppoinment = () => {
                         <TableCell> Age</TableCell>
                         <TableCell> Place</TableCell>
                         <TableCell> Gender</TableCell>
-                        <TableCell> DoctorName</TableCell>
+                        {/* <TableCell> DoctorName</TableCell> */}
                         <TableCell> AppointmentDate</TableCell>
                         <TableCell> Department</TableCell>
                     </TableRow>
@@ -48,7 +48,7 @@ const ViewAppoinment = () => {
                         <TableCell>{item.age}</TableCell>
                         <TableCell>{item.place}</TableCell>
                         <TableCell>{item.gender}</TableCell>
-                        <TableCell>{item.doctorName}</TableCell>
+                        {/* <TableCell>{item.doctorName}</TableCell> */}
                         <TableCell>{item.appointmentDate}</TableCell>
                         <TableCell>{item.department}</TableCell>
                     </TableRow>

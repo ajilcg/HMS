@@ -5,6 +5,7 @@ import { useDebounce } from '@uidotdev/usehooks';
 import InvoicePage from './InvoicePage';
 import FileSaver from 'file-saver';
 const Download = ({ data, setData }) => {
+    
     const debounced = useDebounce(data, 500);
     function handleInput(e) {
         if (!e.target.files?.length)
@@ -47,6 +48,8 @@ const Download = ({ data, setData }) => {
         <input type="file" accept=".json,.template" onChange={handleInput}/>
       </label>
       <p className="text-small">Upload Template</p>
-    </div>);
+    </div>
+    
+    );
 };
 export default Download;

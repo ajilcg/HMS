@@ -23,6 +23,7 @@ Font.register({
         },
     ],
 });
+// location.reload();
 const InvoicePage = ({ data, pdfMode, onChange }) => {
     const [invoice, setInvoice] = useState(data ? { ...data } : { ...initialInvoice });
     const [subTotal, setSubTotal] = useState();

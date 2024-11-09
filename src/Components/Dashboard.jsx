@@ -38,9 +38,9 @@ const dat=[
 ]
 
 const Dashboard=(props)=>{ 
-  //   const navigate=useNavigate();
-  // const location=useLocation();
-  // const data=location.state;
+    const navigate=useNavigate();
+  const location=useLocation();
+  const data=location.state;
   // alert(data);
   //   if (data==null){
   //   navigate('/Login');

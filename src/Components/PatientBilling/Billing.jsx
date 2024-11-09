@@ -15,7 +15,7 @@ export const Billing = () => {
     };
   return (
    <>
-<div className="app">
+<div style={{paddingTop:'5rem'}} className="app">
       {/* <h1 className="center fs-30">Invoice</h1> */}
       <InvoicePage data={data} onChange={onInvoiceUpdated}/>
     </div>

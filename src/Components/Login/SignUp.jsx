@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import './Login.css';
 import axios from 'axios';
 import { Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
  
 export const SignUp = () => {
   const [validated, setValidated] = useState(false);
   const [errorMsg,setErrorMsg]=useState("");
 
 const[form1,setForm]=useState({
-  username: '',
-  password: ''
+  Username: '',
+  Password: ''
  });
 const [response, setResponse] = useState(null);
 const [error, setError] = useState(null);
-
- 
+const navigate=useNavigate();
 
 function capValue(event){
 setForm({...form1,[event.target.name]:event.target.value});
@@ -28,7 +28,7 @@ const finalSubmit = async (e) => {
   try { 
     
       const form = e.currentTarget;
-      if (form1.password!==form1.confirmPswd){
+      if (form1.Password!==form1.confirmPswd){
         setErrorMsg("Password not matching..");
         e.preventDefault();
         e.stopPropagation();
@@ -44,12 +44,12 @@ const finalSubmit = async (e) => {
   }
   setValidated(true);
 
-    const res = await axios.post('https://localhost:7277/api/Login/Register', form1); 
+    const res = await axios.post("https://localhost:7277/api/Login/Register", form1); 
     setResponse(res.data);
     console.log(res.data);
-  
-    alert(res.data);
-         setError(null); // Clear previous errors
+    navigate('/Login');
+ 
+          setError(null); // Clear previous errors
     //  document.getElementById("Form1").reset();
 
   } catch (err) {
@@ -77,12 +77,12 @@ const finalSubmit = async (e) => {
  <Form noValidate validated={validated} className='signForm'>
 <h3>Sign Up</h3>
 <Form.Label>Email</Form.Label>
-      <Form.Control  className='input'  onChange={capValue} name='username'  required placeholder='Email' type='email'> 
+      <Form.Control  className='input'  onChange={capValue} name='Username'  required placeholder='Email' type='email'> 
      </Form.Control>
 <Form.Control.Feedback type='invalid'>Invalid Email</Form.Control.Feedback>
 <br></br>
      <Form.Label>Password</Form.Label>
-     <Form.Control  className='input'  onChange={capValue} name='password'   required placeholder='Password' type='password'> 
+     <Form.Control  className='input'  onChange={capValue} name='Password'   required placeholder='Password' type='password'> 
      </Form.Control>
      <br></br>
      <Form.Label>Confirm Password</Form.Label>

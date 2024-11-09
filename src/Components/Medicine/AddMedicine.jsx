@@ -63,9 +63,13 @@ const AddMedicine = () => {
       <label for='Price'> Price</label>
       <input required id='Price' onChange={(e) => setNewMedicine({ ...newMedicine, price: e.target.value })}    class="form-control" placeholder="Price"></input>
     </div>
-     
-      <button onClick={AddMedicine}>Add</button>
+    <br></br>
+    <div className=' col-md-10'>
 
+<button type="submit"  onClick={AddMedicine} style={{backgroundColor:'#a865ca',color:'white'}} class='btn subbtn' >Add</button> 
+
+</div>
+ 
        <ul>
         {medicine.map((medicine) => (
           <li key={medicine.id}>

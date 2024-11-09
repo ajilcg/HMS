@@ -5,6 +5,7 @@ import { TextField } from '@mui/material'
  import { Form } from 'react-bootstrap'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+//  import {handleData} from '../DashboardItems.js'
  
 export const Login = () => {
    const [validated, setValidated] = useState(false);
@@ -56,7 +57,9 @@ const navigate=useNavigate();
       setResponse(null); // Clear previous response
     }
     if (errorMsg!==404 && validated==true && form1.Password!=='' && form1.Username!==''){
-       navigate('/',{state:form1.Username})
+       navigate('/',{state:form1.Username});
+      //  let hData=form1.Username;
+      //  DashboardItems(hData);
 
     };
 

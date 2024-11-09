@@ -68,7 +68,7 @@ export const Footer = () => {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
+                Ernakulam, India
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />

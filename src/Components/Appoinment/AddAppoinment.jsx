@@ -14,19 +14,14 @@ import { end } from '@popperjs/core';
 
 const AddAppoinment = () => {
   const [appoinments, setAppoinments] = useState([]);
-  const [newAppoinment, setNewAppoinment] = useState({
-   
+  const [newAppoinment, setNewAppoinment] = useState({ 
     patientName: '',
     age: '',
     place: '',
     gender: '',
-    doctorname: '',
+    // doctorname: '',
     department: '',
-    appointmentDate: ''
-    
-
-    
-    
+    appointmentDate: '' 
   });
 
 
@@ -43,7 +38,7 @@ const AddAppoinment = () => {
             age: '',
             place: '',
             gender: '',
-            doctorname: '',
+            // doctorname: '',
             department: '',
             appointmentDate: ''
         });
@@ -54,29 +49,28 @@ const AddAppoinment = () => {
   };
 
   return (
-    <div style={{padding:'6rem'}}>
-<form>
-      <h2>Add Appoinment</h2>
+<form style={{padding:'6rem'}}>
+       <h2>Add Appoinment</h2>
       <br></br>
       
        <div class="form-group col-md-6">
         <label for='Name'>Name</label>
-      <input required id='Name' name='Name'  onChange={(e) => setNewAppoinment({ ...newAppoinment, patientName: e.target.value })}   class="form-control" placeholder="Name"></input>
+      <input required id='Name' name='patientName'  onChange={(e) => setNewAppoinment({ ...newAppoinment, patientName: e.target.value })}   class="form-control" placeholder="Name"></input>
     </div> 
       
        <div class="form-group col-md-6">
       <label for='Age'> Age</label>
-      <input required id='Age'  onChange={(e) => setNewAppoinment({ ...newAppoinment, age: e.target.value })}    class="form-control" placeholder="Age"></input>
+      <input required id='Age' name='age'  onChange={(e) => setNewAppoinment({ ...newAppoinment, age: e.target.value })}    class="form-control" placeholder="Age"></input>
     </div>
      
       <div class="form-group col-md-6">
       <label for='Place'> Place</label>
-      <input required id='APlacege' onChange={(e) => setNewAppoinment({ ...newAppoinment, place: e.target.value })}    class="form-control" placeholder="Place"></input>
+      <input required id='APlacege' name='place' onChange={(e) => setNewAppoinment({ ...newAppoinment, place: e.target.value })}    class="form-control" placeholder="Place"></input>
     </div>
       
       <div class="form-group col-md-6">
       <label for='gender'>Gender</label>
-      <select required id='gender' onChange={(e) => setNewAppoinment({ ...newAppoinment, gender: e.target.value })} style={{height:'50px'}} class="form-control">
+      <select required name='gender' id='gender' onChange={(e) => setNewAppoinment({ ...newAppoinment, gender: e.target.value })} style={{height:'50px'}} class="form-control">
         <option selected>Please Select</option>
         <option>Male</option>
         <option>Female</option>
@@ -86,7 +80,7 @@ const AddAppoinment = () => {
      
       <div class="form-group col-md-6">
       <label for='department'>Department</label>
-      <select required id='department' onChange={(e) => setNewAppoinment({ ...newAppoinment, department: e.target.value })} style={{height:'50px'}} class="form-control">
+      <select required name='department' id='department' onChange={(e) => setNewAppoinment({ ...newAppoinment, department: e.target.value })} style={{height:'50px'}} class="form-control">
         <option selected>Please Select</option>
         <option>Caridyolgy</option>
         <option>Dental</option>
@@ -96,10 +90,13 @@ const AddAppoinment = () => {
       
       <div class="form-group col-md-6">
       <label for='appointmentDate' >Appoinment Date</label>
-      <input required id='appointmentDate' onChange={(e) => setNewAppoinment({ ...newAppoinment, appointmentDate: e.target.value })}  type="date" class="form-control" />
-          </div>
-      <button onClick={addPatient}>Submit</button>
+      <input required name='appointmentDate' id='appointmentDate' onChange={(e) => setNewAppoinment({ ...newAppoinment, appointmentDate: e.target.value })}  type="date" class="form-control" />
+          </div><br></br>
+          <div className=' col-md-10'>
 
+       <button type="submit"  onClick={addPatient} style={{backgroundColor:'#a865ca',color:'white'}} class='btn subbtn' >Submit</button> 
+
+</div>
        <ul>
         {appoinments.map((appointment) => (
           <li key={appointment.id}>
@@ -107,8 +104,7 @@ const AddAppoinment = () => {
           </li>
         ))}
       </ul>
-      </form>
-    </div>
+       </form>
   );
 };
 
