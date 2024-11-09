@@ -126,6 +126,5 @@ const finalOut = async (e) => {
  </form>
 
     </>
-    <div></div>
   )
 }
