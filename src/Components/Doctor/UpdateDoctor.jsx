@@ -51,9 +51,13 @@ const UpdateDoctor = () => {
   };
 
   return (
-    <div>
-      <h2>Doctor Update</h2>
-      <div class="form-group col-md-6">
+    <div style={{paddingTop:'6rem'}}>
+      {/* <h2>Doctor Update</h2> */}
+      <div>
+  <strong className='form-group'>Update Doctors</strong>
+<hr></hr>
+  </div>
+      {/* <div class="form-group col-md-6">
       <label for='Doctor ID'>Doctor ID</label>
       <input 
         type="text" 
@@ -61,8 +65,15 @@ const UpdateDoctor = () => {
         value={doctorId} 
         onChange={(e) => setDoctorId(e.target.value)} 
       />
-      </div>
-      <div class="form-group col-md-6">
+      </div> */}
+
+<div class="form-group col-md-6">
+      <label for='Doctor ID'> Doctor ID</label>
+      <input required id='Doctor ID' onChange={(e) => setDoctorId(e.target.value)}  name='Doctor ID'   class="form-control" placeholder=" Doctor ID"></input>
+    </div> 
+
+
+      {/* <div class="form-group col-md-6">
       <label for='Name'>Name</label>
       <input 
         type="text" 
@@ -70,8 +81,13 @@ const UpdateDoctor = () => {
         value={newdoctor.name} 
         onChange={(e) => setNewdoctor({ ...newdoctor, name: e.target.value })} 
       />
-       </div>
+       </div> */}
        <div class="form-group col-md-6">
+      <label for='Name'> Name</label>
+      <input required id='Name' onChange={(e) => setNewdoctor({ ...newdoctor, name: e.target.value })}  name='Name'   class="form-control" placeholder=" Name"></input>
+    </div> 
+
+       {/* <div class="form-group col-md-6">
        <label for='Specialization'>Specialization</label>
       <input 
         type="text" 
@@ -79,8 +95,13 @@ const UpdateDoctor = () => {
         value={newdoctor.specialization} 
         onChange={(e) => setNewdoctor({ ...newdoctor, specialization: e.target.value })} 
       />
-       </div>
+       </div> */}
        <div class="form-group col-md-6">
+      <label for='Specialization'> Specialization</label>
+      <input required id='Specialization'onChange={(e) => setNewdoctor({ ...newdoctor, specialization: e.target.value })}   name='Specialization'   class="form-control" placeholder=" Specialization"></input>
+    </div> 
+
+       {/* <div class="form-group col-md-6">
        <label for='Time'>Time</label>
       <input 
         type="time" 
@@ -88,8 +109,13 @@ const UpdateDoctor = () => {
         value={newdoctor.time} 
         onChange={(e) => setNewdoctor({ ...newdoctor, time: e.target.value })} 
       />
-      </div>
-      <div class="form-group col-md-6">
+      </div> */}
+ <div class="form-group col-md-6">
+      <label for='Time'> Time</label>
+      <input  required id='Time'onChange={(e) => setNewdoctor({ ...newdoctor, specialization: e.target.value })}   name='Time'   class="form-control" placeholder=" Time"></input>
+    </div> 
+
+      {/* <div class="form-group col-md-6">
       <label for='Day'>Day</label>
       <input 
         type="date" 
@@ -97,8 +123,17 @@ const UpdateDoctor = () => {
         value={newdoctor.day} 
         onChange={(e) => setNewdoctor({ ...newdoctor, day: e.target.value })} 
       />
-       </div>
-      <button onClick={updateDoctor}>Update Doctor</button>
+       </div> */}
+<div class="form-group col-md-6">
+      <label for='Day'> Day</label>
+      <input  required id='Day'onChange={(e) => setNewdoctor({ ...newdoctor, day: e.target.value })}   name='Day'   class="form-control" placeholder=" Day"></input>
+    </div> 
+
+     
+      <div class="btnb">
+    <button type="submit" class='btn subbtn' >Update Doctor</button> 
+  
+   </div>
 
       {/* <h3>Registered Doctors:</h3> */}
       <ul>
