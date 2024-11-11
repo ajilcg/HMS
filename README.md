@@ -10,9 +10,10 @@ Currently, two official plugins are available:
 
 **Screens**
 
-![image](https://github.com/user-attachments/assets/64329735-d0bc-4fda-ac8c-2b6491c99954)
-![image](https://github.com/user-attachments/assets/75f2a615-d409-4c34-9bd7-9f4e5361c40f)
-![image](https://github.com/user-attachments/assets/f0687c09-2ab4-40bb-be30-5baaed0cd536)
-![image](https://github.com/user-attachments/assets/c843119c-dab2-4132-a7c2-56aad2121040)
-![image](https://github.com/user-attachments/assets/743cb2ed-1b89-4e36-8119-9fac52bc801c)
-![quinton-coetzee-gpa8Y_Fk7Rg-unsplash](https://github.com/user-attachments/assets/ae8ee883-2eb3-4883-a8ee-3355e35bd4ca)
+![Screenshot_11-11-2024_20277_localhost](https://github.com/user-attachments/assets/862ed200-643b-4d2e-a7c9-ae1d80b477b8)
+![Screenshot_11-11-2024_20286_localhost](https://github.com/user-attachments/assets/8fd7c26a-f1f7-4dc7-bf52-531def7ef14a)
+![Screenshot_11-11-2024_202826_localhost](https://github.com/user-attachments/assets/24201f9b-d834-44de-ae1c-f5a58e82d450)
+![Screenshot_11-11-2024_203232_localhost](https://github.com/user-attachments/assets/7051d7a3-4d57-4b3c-94df-a1d1be07f704)
+![Screenshot_11-11-2024_203252_localhost](https://github.com/user-attachments/assets/0bbc7be6-76b1-4cca-a67e-8f09e13467ca)
+![Screenshot_11-11-2024_20368_](https://github.com/user-attachments/assets/578f9a56-5c81-428b-b640-d000fdc4c327)
+
