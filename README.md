@@ -15,3 +15,4 @@ Currently, two official plugins are available:
 ![image](https://github.com/user-attachments/assets/f0687c09-2ab4-40bb-be30-5baaed0cd536)
 ![image](https://github.com/user-attachments/assets/c843119c-dab2-4132-a7c2-56aad2121040)
 ![image](https://github.com/user-attachments/assets/743cb2ed-1b89-4e36-8119-9fac52bc801c)
+![quinton-coetzee-gpa8Y_Fk7Rg-unsplash](https://github.com/user-attachments/assets/ae8ee883-2eb3-4883-a8ee-3355e35bd4ca)
