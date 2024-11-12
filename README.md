@@ -7,6 +7,9 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+**Hospital Management**
+
+The Hospital Management System (HMS) is a comprehensive software solution designed to enhance the operational efficiency of healthcare facilities. By integrating key functions into a cohesive platform, the HMS facilitates the management of patient records, doctor profiles, appointment scheduling, billing processes, and pharmacy inventory. This report provides an in-depth overview of the HMS project, detailing its objectives, modules, features, user stories, and technical specifications.
 
 **Screens**
 
