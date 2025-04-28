@@ -16,7 +16,7 @@ The Hospital Management System (HMS) is a comprehensive software solution design
 ![Screenshot_11-11-2024_20277_localhost](https://github.com/user-attachments/assets/862ed200-643b-4d2e-a7c9-ae1d80b477b8)
 ![Screenshot_11-11-2024_20286_localhost](https://github.com/user-attachments/assets/8fd7c26a-f1f7-4dc7-bf52-531def7ef14a)
 ![Screenshot_11-11-2024_202826_localhost](https://github.com/user-attachments/assets/24201f9b-d834-44de-ae1c-f5a58e82d450)
-![Screenshot_11-11-2024_203232_localhost](https://github.com/user-attachments/assets/7051d7a3-4d57-4b3c-94df-a1d1be07f704)
-![Screenshot_11-11-2024_203252_localhost](https://github.com/user-attachments/assets/0bbc7be6-76b1-4cca-a67e-8f09e13467ca)
+![Screenshot_28-4-2025_172912_localhost](https://github.com/user-attachments/assets/ec505e35-f037-4858-9ea6-6e2007dc333b)
+![Screenshot_28-4-2025_173059_localhost](https://github.com/user-attachments/assets/49b692f4-f2d3-466d-a134-7bf3190505a3)
 ![Screenshot_11-11-2024_20368_](https://github.com/user-attachments/assets/578f9a56-5c81-428b-b640-d000fdc4c327)
 
